@@ -34,6 +34,12 @@ func TestIntKeys(t *testing.T) {
 	assert.ElementsMatch(t, expected, results)
 }
 
+func TestKeysEmptyInput(t *testing.T) {
+	assert.Nil(t, xmaps.Keys(map[int]string{}))
+	var nilMap map[int]string
+	assert.Nil(t, xmaps.Keys(nilMap))
+}
+
 func TestStringValues(t *testing.T) {
 	input := map[string]int{
 		"one":   100,
@@ -58,4 +64,10 @@ func TestFloat64Values(t *testing.T) {
 	results := xmaps.Values(input)
 
 	assert.ElementsMatch(t, expected, results)
+}
+
+func TestValuesEmptyInput(t *testing.T) {
+	assert.Nil(t, xmaps.Values(map[string]float64{}))
+	var nilMap map[string]float64
+	assert.Nil(t, xmaps.Values(nilMap))
 }
