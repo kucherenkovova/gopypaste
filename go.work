@@ -1,9 +1,9 @@
 go 1.22.2
 
 use (
-	xmaps
-	xmath
-	xnet/xhttp
-	xslog
-	xstrconv
+	./xmaps
+	./xmath
+	./xnet/xhttp
+	./xslog
+	./xstrconv
 )
