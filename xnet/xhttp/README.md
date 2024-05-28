@@ -3,5 +3,5 @@ Extensions to the standard Go library's `net/http` package. `ListenAndServe` alt
 
 ### Install
 ```
-go get github.com/kucherenkovova/gopypaste/xnet/xhttp@v0.1.0
+go get github.com/kucherenkovova/gopypaste/xnet/xhttp@v0.1.1
 ```
