@@ -4,6 +4,7 @@ use (
 	./xmaps
 	./xmath
 	./xnet/xhttp
+	./xslices
 	./xslog
 	./xstrconv
 )
