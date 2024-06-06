@@ -7,4 +7,5 @@ use (
 	./xslices
 	./xslog
 	./xstrconv
+	./xtime
 )
