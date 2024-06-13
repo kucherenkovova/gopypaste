@@ -14,13 +14,19 @@ func ListenAndServeContext(ctx context.Context, addr string, handler http.Handle
 	defer cancel()
 
 	server := &http.Server{Addr: addr, Handler: handler}
+	done := make(chan struct{})
 
 	go func() {
-		<-ctx.Done()
-		_ = server.Shutdown(context.Background())
+		select {
+		case <-ctx.Done():
+			_ = server.Shutdown(context.Background())
+		case <-done:
+			return
+		}
 	}()
 
 	if err := server.ListenAndServe(); err != nil && !errors.Is(err, http.ErrServerClosed) {
+		close(done)
 		return err
 	}
 
