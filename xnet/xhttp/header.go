@@ -11,6 +11,7 @@ const (
 	HeaderOrigin         = "Origin"
 	HeaderReferer        = "Referer"
 	HeaderServer         = "Server"
+	HeaderSetCookie      = "Set-Cookie"
 	HeaderUserAgent      = "User-Agent"
 	HeaderXForwardedFor  = "X-Forwarded-For"
 )
